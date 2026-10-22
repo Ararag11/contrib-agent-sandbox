@@ -9,6 +9,10 @@ class TextStatsTests(unittest.TestCase):
     def test_average_word_length(self):
         self.assertEqual(average_word_length("ab abcd"), 3.0)
 
+    def test_average_word_length_empty(self):
+        self.assertEqual(average_word_length(""), 0.0)
+        self.assertEqual(average_word_length("   "), 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()
